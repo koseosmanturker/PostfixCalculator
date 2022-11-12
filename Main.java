@@ -6,13 +6,11 @@ public class Main {
 		Stack<Integer> s = new LinkedBasedStack<Integer>();
 		
 		int valueCounter = 0;
+		exp = deleteSpaces(exp);
 		
 		for(int i = 0; i < exp.length(); i++) {
 			
 			char character = exp.charAt(i);
-			if(character == 32) {// check if it is a white space
-				continue;
-			}
 			
 			int check = character;	
 			if(check >= 48 && check <= 57) {// check if it is between 0-9
@@ -69,6 +67,22 @@ public class Main {
 		
 		return res;
 		
+	}
+	
+	public static String deleteSpaces(String str) {
+		
+		String finalStr = "";
+		
+		for(int i = 0; i < str.length(); i++) {
+			if(str.charAt(i) == ' ') {
+				continue;
+			}
+			else {
+				finalStr += str.charAt(i);
+			}
+		}
+			
+		return finalStr;
 	}
 	
 	public static void main(String args[]) {
