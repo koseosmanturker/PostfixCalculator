@@ -67,3 +67,20 @@ public static int PostfixCalculator(String exp) {
 		return res;
 		
 	}
+	
+	public static String deleteSpaces(String str) {
+		
+		String finalStr = "";
+		
+		for(int i = 0; i < str.length(); i++) {
+			if(str.charAt(i) == ' ') {
+				continue;
+			}
+			else {
+				finalStr += str.charAt(i);
+			}
+		}
+			
+		return finalStr;
+	}
+	
